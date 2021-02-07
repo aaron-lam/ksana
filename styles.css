@@ -17,11 +17,22 @@ body {
 
 #game {
     width: 100vw;
-    height: 80vh;
 }
 
 .description {
     font-size: 20px;
     font-family: monospace;
     text-align: center;
+}
+
+@media (min-width:320px) {
+    #game {
+        height: 40vh;
+    }
+}
+
+@media (min-width:1025px) {
+    #game {
+        height: 80vh;
+    }
 }
