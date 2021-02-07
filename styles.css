@@ -19,3 +19,9 @@ body {
     width: 100vw;
     height: 80vh;
 }
+
+.description {
+    font-size: 20px;
+    font-family: monospace;
+    text-align: center;
+}
