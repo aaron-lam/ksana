@@ -25,7 +25,7 @@ body {
     text-align: center;
 }
 
-@media (min-width:320px) {
+@media (min-width:320px) and (orientation:portrait) {
     #game {
         height: 40vh;
     }
