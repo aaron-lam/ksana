@@ -1,0 +1,21 @@
+body {
+    font-family: 'Press Start 2P', serif;
+    font-size: 24px;
+    margin: 0;
+    padding: 0;
+}
+
+.title {
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#game {
+    width: 100vw;
+    height: 80vh;
+}
