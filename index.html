@@ -20,10 +20,11 @@
 <body>
     <h4 class="title">Ksana</h4>
     <div class="container">
-        <canvas id="game" style="background: url('src/assets/background.jpg'); background-size: cover;" tabindex ="0" autofocus></canvas>
+        <canvas onclick="getResponseTime()" id="game" style="background: url('src/assets/background.jpg'); background-size: cover;" tabindex ="0" autofocus></canvas>
     </div>
+    <input onclick="startGame(1000)" type="button" class="btn-medium" value="Play"/>
     <div class="description">
-        Ksana is a fast draw dueling game. When you see the text "Now!", click / tap the screen quickly to kill the enemy before he kills you.
+        Ksana is a fast draw dueling game. When you see the text "Go!", click / tap the screen quickly to kill the enemy before he kills you.
     </div>
 </body>
 </html>
