@@ -7,6 +7,19 @@ body {
     padding: 0;
 }
 
+canvas { 
+    outline: none; 
+    border: none; 
+}
+
+.unselectable {
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
 .title {
     text-align: center;
 }
