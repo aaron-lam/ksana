@@ -25,6 +25,7 @@ function getRandomTime(maxMilliseconds) {
 }
 
 function displayReadySetGoText() {
+	sceneManager.resetRound();
 	sceneManager.game.isDisplayingReadyText = true;
 	setTimeout(() => {
 		sceneManager.game.isDisplayingReadyText = false;
@@ -45,7 +46,8 @@ function startGame(waitInMilliseconds) {
 
 function getResponseTime() {
 	if (sceneManager.game.isDisplayingGoText) {
+		sceneManager.game.isDisplayingGoText = false;
 		console.log(sceneManager.game.responseTimer);
-		sceneManager.game.responseTimer = 0;
+		sceneManager.game.isDisplayingStatusText = true;
 	}
 }
