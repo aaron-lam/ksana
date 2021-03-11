@@ -7,6 +7,8 @@ class SceneManager {
         this.game.isDisplayingGoText = false;
         this.game.isDisplayingStatusText = false;
         this.game.responseTimer = 0;
+        this.game.isWin = false;
+        this.isCalledFirstTime = true;
         this.x = 0;
         this.loadAnimationExamples();
     };
@@ -30,6 +32,8 @@ class SceneManager {
     }
 
     resetRound() {
+        this.loadAnimationExamples();
+        this.isCalledFirstTime = true;
         this.game.isDisplayingReadyText = false;
         this.game.isDisplayingSetText = false;
         this.game.isDisplayingGoText = false;
@@ -46,8 +50,13 @@ class SceneManager {
             this.drawText(ctx, "Go!!", 130 * PARAMS.BLOCKWIDTH);
             this.game.responseTimer += this.game.clockTick;
         } else if (this.game.isDisplayingStatusText) {
-            console.log("!!", this.game.isDisplayingStatusText);
-            const status = (this.game.responseTimer > 0.3) ? "Too Slow!" : "Perfect!";
+            this.game.isWin = this.game.responseTimer <= 0.3;
+            const status = this.game.isWin ? "Perfect!" : "Too Slow!";
+            if (this.isCalledFirstTime) {
+                this.game.entities[0].state = 1;
+                this.game.entities[1].state = 1;
+                this.isCalledFirstTime = false;
+            }
             this.drawText(ctx, status, 110 * PARAMS.BLOCKWIDTH);
         }
     }

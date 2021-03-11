@@ -1,7 +1,13 @@
 const ASSET_MANAGER = new AssetManager();
 
 ASSET_MANAGER.queueDownload("./src/assets/ksana/idle.png");
+ASSET_MANAGER.queueDownload("./src/assets/ksana/run.png");
+ASSET_MANAGER.queueDownload("./src/assets/ksana/attack.png");
+ASSET_MANAGER.queueDownload("./src/assets/ksana/death.png");
 ASSET_MANAGER.queueDownload("./src/assets/blood-moon/idle.png");
+ASSET_MANAGER.queueDownload("./src/assets/blood-moon/run.png");
+ASSET_MANAGER.queueDownload("./src/assets/blood-moon/attack.png");
+ASSET_MANAGER.queueDownload("./src/assets/blood-moon/death.png");
 
 ASSET_MANAGER.downloadAll(function () {
 	const gameEngine = new GameEngine();
